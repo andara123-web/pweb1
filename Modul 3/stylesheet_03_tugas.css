@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: lightskyblue;
+    color: black;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #ffffff 3px solid;
+}
+
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.bio-section {
+    padding: 20px;
+    background: #ffffff;
+    margin: 20px 0;
+}
+
+.bio-section h2 {
+    text-align: center;
+}
+
+.bio-section p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.myEmail {
+    text-decoration: none;
+    color: black;
+}
