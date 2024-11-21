@@ -1,0 +1,30 @@
+function testVar() {
+    var x = 1;
+    if (true) {
+        var x = 2; // re-declare and update
+        console.log(x); // Output: 2
+    }
+    console.log(x); // Output: 2 (because var is function-scoped)
+}
+
+function testLet() {
+    let y = 1;
+    if (true) {
+        let y = 2; // block-scoped
+        console.log(y); // Output: 2
+    }
+    console.log(y); // Output: 1 (because let is block-scoped)
+}
+
+function testConst() {
+    const z = 1;
+    if (true) {
+        const z = 2; // block-scoped
+        console.log(z); // Output: 2
+    }
+    console.log(z); // Output: 1 (because const is block-scoped)
+}
+
+testVar();
+testLet();
+testConst();

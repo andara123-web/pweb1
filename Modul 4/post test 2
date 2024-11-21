@@ -1,0 +1,7 @@
+function kuadrat(n) {
+    return n * n;
+}
+
+
+let hasil = kuadrat(7);
+console.log(hasil); // Output: 49

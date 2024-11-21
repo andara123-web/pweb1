@@ -1,0 +1,11 @@
+let globalVar = "Saya adalah variabel global";
+
+function contohFungsi() {
+    let localVar = "Saya adalah variabel lokal";
+    console.log(localVar); // Output: Saya adalah variabel lokal
+}
+
+contohFungsi();
+
+console.log(globalVar); // Output: Saya adalah variabel global
+console.log(localVar); // Error: localVar is not defined
