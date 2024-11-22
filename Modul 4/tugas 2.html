@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Alumni</title>
+    <link rel="stylesheet" href="stylesheet_4_tugas.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Pencarian Alumni</h1>
+        <input type="text" id="search" placeholder="Cari berdasarkan nama atau jurusan..." onkeyup="filterAlumni()">
+        <table id="AlumniTable">
+            <thead>
+                <tr>
+                    <th>nama</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jimmy</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <td>Eno</td>
+                    <td>Manajemen</td>
+                </tr>
+                <tr>
+                    <td>opik</td>
+                    <td>Teknik Mesin</td>
+                </tr>
+                <tr>
+                    <td>Agung</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function filterAlumni() {
+            let input = document.getElementById("search").value.toLowerCase(); // Ambil input pencarian
+            let table = document.getElementById("AlumniTable"); // Ambil tabel alumni
+            let rows = table.getElementsByTagName("tr"); // Ambil semua baris dalam tabel
+
+            // Loop melalui baris (mulai dari baris pertama setelah header)
+            for (let i = 1; i < rows.length; i++) {
+                let cells = rows[i].getElementsByTagName("td"); // Ambil semua sel pada baris
+                let nameCell = cells[0].innerText.toLowerCase(); // Ambil teks dari kolom Nama
+                let jurusanCell = cells[1].innerText.toLowerCase(); // Ambil teks dari kolom Jurusan
+
+                // Cek apakah nama atau jurusan mengandung input pencarian
+                if (nameCell.includes(input) || jurusanCell.includes(input)) {
+                    rows[i].style.display = ""; // Tampilkan baris jika cocok
+                } else {
+                    rows[i].style.display = "none"; // Sembunyikan baris jika tidak cocok
+                }
+            }
+        }
+    </script>
+</body>
+</html>
