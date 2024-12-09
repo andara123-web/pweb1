@@ -1,0 +1,34 @@
+
+.gallery img {
+    width: 150px;
+    margin: 10px;
+    cursor: pointer; 
+    display: flek;
+    justify-content:center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(5, 4, 4, 0.8);
+    text-align: center;
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
